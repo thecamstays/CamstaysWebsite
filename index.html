@@ -52,7 +52,10 @@
 <script>
 const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav-links');
 toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open);toggle.textContent=open?'×':'☰'});
-const serviceDropdown=document.querySelector('.nav-item-dropdown');\nconst serviceTrigger=serviceDropdown.querySelector(':scope > a');\nserviceTrigger.addEventListener('click',e=>{if(window.matchMedia('(max-width:850px)').matches){e.preventDefault();const open=serviceDropdown.classList.toggle('open');serviceTrigger.setAttribute('aria-expanded',open)}});\nnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(a.closest('.dropdown-menu'))serviceDropdown.classList.remove('open');if(!a.closest('.nav-item-dropdown'))serviceDropdown.classList.remove('open');nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));
+const serviceDropdown=document.querySelector('.nav-item-dropdown');
+const serviceTrigger=serviceDropdown.querySelector(':scope > a');
+serviceTrigger.addEventListener('click',e=>{if(window.matchMedia('(max-width:850px)').matches){e.preventDefault();const open=serviceDropdown.classList.toggle('open');serviceTrigger.setAttribute('aria-expanded',open)}});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(a.closest('.dropdown-menu'))serviceDropdown.classList.remove('open');if(!a.closest('.nav-item-dropdown'))serviceDropdown.classList.remove('open');nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 document.getElementById('year').textContent=new Date().getFullYear();
