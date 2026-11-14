@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "uploads/projects"
+public_folder: "/uploads/projects"
+site_url: "https://camstays.ca"
+display_url: "https://camstays.ca"
+collections:
+  - name: "projects"
+    label: "Project Gallery"
+    files:
+      - name: "project-list"
+        label: "Projects"
+        file: "content/projects.json"
+        format: "json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.status}}"
+            fields:
+              - { label: "Project Name", name: "title", widget: "string" }
+              - { label: "Project Reference / Slug", name: "slug", widget: "string", required: false }
+              - { label: "Publish on Website", name: "published", widget: "boolean", default: false }
+              - label: "Project Status"
+                name: "status"
+                widget: "select"
+                options: ["completed", "ongoing", "upcoming"]
+              - label: "Project Category"
+                name: "category"
+                widget: "select"
+                options: ["kitchen", "bathroom", "basement", "interior", "exterior", "construction"]
+              - { label: "Location", name: "location", widget: "string", required: false }
+              - { label: "Short Description", name: "summary", widget: "text" }
+              - { label: "Project Overview", name: "overview", widget: "text", required: false }
+              - { label: "Scope of Work", name: "scope", widget: "text", required: false }
+              - { label: "Cover Photograph", name: "cover", widget: "image" }
+              - { label: "Gallery Photographs", name: "gallery", widget: "list", required: false, field: { label: "Photograph", name: "image", widget: "image" } }
+              - { label: "Completion Date", name: "completionDate", widget: "string", required: false }
+              - { label: "Expected Completion", name: "expectedCompletion", widget: "string", required: false }
+              - { label: "Highlights", name: "highlights", widget: "text", required: false }
