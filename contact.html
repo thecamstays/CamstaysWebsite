@@ -16,10 +16,37 @@
 @media(max-width:600px){.container{width:calc(100% - 34px)}.topbar .container{justify-content:center}.topbar span:last-child{display:none}.hero{padding:82px 0}.section{padding:68px 0}.enquiry-grid,.footer-grid,.form{grid-template-columns:1fr}.field.full{grid-column:auto}.info-panel{padding:26px}.copyright{display:block}.copyright span{display:block;margin-top:8px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
-<style>.nav-item-dropdown{position:relative;display:flex;align-items:center}.nav-item-dropdown>a:after{content:"";}.dropdown-menu{display:none;position:absolute;top:100%;left:-14px;min-width:230px;padding:9px;background:#fff;border:1px solid #dfe6e3;box-shadow:0 14px 30px #26374618;border-radius:3px;z-index:30}.dropdown-menu a{display:block;padding:11px 13px;white-space:nowrap;text-decoration:none;color:#263746;font-size:.84rem;font-weight:600}.dropdown-menu a:hover{background:#f2f5f4;color:#174B35}.nav-item-dropdown:hover .dropdown-menu,.nav-item-dropdown:focus-within .dropdown-menu{display:block}@media(max-width:900px){.nav-item-dropdown{display:block}.dropdown-menu{display:block;position:static;box-shadow:none;border:0;border-left:2px solid #84949A;border-radius:0;margin:6px 0 0 8px;padding:2px 0 2px 8px;min-width:0}.dropdown-menu a{white-space:normal;padding:8px 10px}}</style></head>
+<style>.nav-item-dropdown{position:relative;display:flex;align-items:center}.nav-item-dropdown>a:after{content:"";}.dropdown-menu{display:none;position:absolute;top:100%;left:-14px;min-width:230px;padding:9px;background:#fff;border:1px solid #dfe6e3;box-shadow:0 14px 30px #26374618;border-radius:3px;z-index:30}.dropdown-menu a{display:block;padding:11px 13px;white-space:nowrap;text-decoration:none;color:#263746;font-size:.84rem;font-weight:600}.dropdown-menu a:hover{background:#f2f5f4;color:#174B35}.nav-item-dropdown:hover .dropdown-menu,.nav-item-dropdown:focus-within .dropdown-menu{display:block}@media(max-width:900px){.nav-item-dropdown{display:block}.dropdown-menu{display:block;position:static;box-shadow:none;border:0;border-left:2px solid #84949A;border-radius:0;margin:6px 0 0 8px;padding:2px 0 2px 8px;min-width:0}.dropdown-menu a{white-space:normal;padding:8px 10px}}</style><style>
+/* CAMSTAYS primary Services navigation */
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-item-dropdown{position:relative;display:flex;align-items:center}
+.nav-links .services-link{display:inline-flex;align-items:center;gap:7px;visibility:visible!important;opacity:1!important}
+.nav-item-dropdown .dropdown-menu{display:none;position:absolute;top:100%;left:-12px;min-width:235px;padding:9px;background:#fff;border:1px solid #dfe6e3;box-shadow:0 14px 30px #26374620;border-radius:4px;z-index:1000}
+.nav-item-dropdown .dropdown-menu a{display:block;padding:12px 14px;color:#263746;text-decoration:none;white-space:nowrap}
+.nav-item-dropdown .dropdown-menu a:hover{background:#f2f5f4;color:#174B35}
+.nav-item-dropdown:hover .dropdown-menu,.nav-item-dropdown:focus-within .dropdown-menu{display:block}
+@media(max-width:900px){
+.nav-links{align-items:stretch}
+.nav-item-dropdown{display:block}
+.nav-item-dropdown .dropdown-menu{display:block;position:static;min-width:0;margin:5px 0 8px 10px;padding:2px 0 2px 9px;border:0;border-left:2px solid #84949A;box-shadow:none}
+.nav-item-dropdown .dropdown-menu a{white-space:normal;padding:9px 12px}
+}
+</style>
+</head>
 <body>
 <div class="topbar"><div class="container"><span>Property Solutions · Construction · Accommodation</span><span><a href="mailto:info@camstays.ca">info@camstays.ca</a></span></div></div>
-<header class="nav"><div class="container nav-inner"><a href="index.html" aria-label="CAMSTAYS home"><img class="brand-logo" src="assets/camstays-primary-logo.png" alt="CAMSTAYS LTD."></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About Us</a><div class="nav-item-dropdown"><a href="#" aria-haspopup="true">Services <span aria-hidden="true">⌄</span></a><div class="dropdown-menu"><a href="renovations-construction.html">Construction &amp; Renovations</a><a href="accommodation.html">Accommodation Services</a></div></div><a class="nav-cta" href="contact.html">Contact Us ↗</a></nav></div></header>
+<header class="nav"><div class="container nav-inner"><a href="index.html" aria-label="CAMSTAYS home"><img class="brand-logo" src="assets/camstays-primary-logo.png" alt="CAMSTAYS LTD."></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><nav class="nav-links" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<div class="nav-item-dropdown">
+<a class="services-link" href="renovations-construction.html" aria-haspopup="true" aria-expanded="false">Services <span aria-hidden="true">▾</span></a>
+<div class="dropdown-menu">
+<a href="renovations-construction.html">Construction &amp; Renovations</a>
+<a href="accommodation.html">Accommodation Services</a>
+</div>
+</div>
+<a class="nav-cta" href="contact.html">Contact Us ↗</a>
+</nav></div></header>
 <main>
 <section class="hero"><div class="container"><div class="eyebrow">Get in touch with CAMSTAYS</div><h1>Let's Start a Conversation.</h1><p>Whether you are planning a renovation, exploring accommodation options or interested in partnering with CAMSTAYS, we would be happy to hear from you.</p></div></section>
 <section class="section"><div class="container"><div class="section-head"><div class="eyebrow">Reach our team</div><h2>We're here to help.</h2><p>Connect with CAMSTAYS LTD. using the details below, or find our location in Kamloops.</p></div>
